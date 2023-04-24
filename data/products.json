@@ -3,132 +3,202 @@
         "_id": {
             "$oid": "a00000000000000000000001"
         },
-        "name": "nyakörv",
-        "price": 3200,
-        "type": "kiegészítő",
-        "description": "Egy nagyon kényelmes naykörv.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg",
+        "name": "Hagyma",
+        "price": 270,
+        "type": "Vetőmagok",
+        "description": "Az egészséges étkezéshez",
+        "picture": "Hagyma.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000002"
         },
-        "name": "kutyatáp",
-        "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Sárgarépa",
+        "price": 230,
+        "type": "Vetőmagok",
+        "description": "Az egészséges étkezéshez",
+        "picture": "Sárgarépa.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000003"
         },
-        "name": "drágább kutyatáp",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Petrezselyem",
+        "price": 300,
+        "type": "Vetőmagok",
+        "description": "Az egészséges étkezéshez",
+        "picture": "Petrezselyem.webp"
         
     },
     {
         "_id": {
             "$oid": "a00000000000000000000004"
         },
-        "name": "kutyatáp XL",
-        "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Borsó",
+        "price": 390,
+        "type": "Vetőmagok",
+        "description": "Az egészséges étkezéshez",
+        "picture": "Borsó.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000005"
         },
-        "name": "drágább kutyatáp XL",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Karalábé",
+        "price": 330,
+        "type": "Vetőmagok",
+        "description": "Az egészséges étkezéshez",
+        "picture": "Karalábé.webp"
         
-    }
+    },
     {
         "_id": {
             "$oid": "a00000000000000000000006"
         },
-        "name": " Macsak táp",
-        "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Lapát",
+        "price": 2300,
+        "type": "Szerszámok",
+        "description": "A nehéz munkálatokhoz",
+        "picture": "Lapát.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000007"
         },
-        "name": "drágább macskatáp",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
-    }
+        "name": "Gereblye",
+        "price": 3500,
+        "type": "Szerszámok",
+        "description": "A nehéz munkálatokhoz",
+        "picture": "Gereblye.webp"
+    },
     {
         "_id": {
             "$oid": "a00000000000000000000008"
         },
-        "name": "macsakatáp XL",
+        "name": "Seprű",
         "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "type": "Szerszámok",
+        "description": "A nehéz munkálatokhoz",
+        "picture": "Seprű.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000009"
         },
-        "name": "drágább macskatáp XL",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Ásó",
+        "price": 5000,
+        "type": "Szerszámok",
+        "description": "A nehéz munkálatokhoz",
+        "picture": "Ásó.webp"
     },
     {
         "_id": {
             "$oid": "a00000000000000000000010"
         },
-        "name": "kutyatáp",
-        "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Csákány",
+        "price": 6000,
+        "type": "Szerszámok",
+        "description": "A nehéz munkálatokhoz",
+        "picture": "Csákány.webp"
     },
     {
         "_id": {
             "$oid": "b00000000000000000000011"
         },
-        "name": "hörcsög eledel",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Kalapács",
+        "price": 6500,
+        "type": "Barkácsolás",
+        "description": "A minőségi eredményhez",
+        "picture": "Kalapács.webp"
     },
     {
         "_id": {
             "$oid": "b00000000000000000000012"
         },
-        "name": "hörcsög eledel XL",
-        "price": 15320,
-        "type": "tápok",
-        "description": "Finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Csavarhuzó",
+        "price": 4000,
+        "type": "Barkácsolás",
+        "description": "A minőségi eredményhez",
+        "picture": "Csavarhúzó.webp"
     },
-    {
+    {    
         "_id": {
             "$oid": "b00000000000000000000013"
         },
-        "name": "drágább kutyatáp",
-        "price": 18000,
-        "type": "tápok",
-        "description": "Drága, finom és egészséges eledel a kis kedvencünk számára.",
-        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_27/2918166/190701-dog-food-eating-bowl-ac-527p.jpg"
+        "name": "Csillag-villás kulcs",
+        "price": 3000,
+        "type": "Barkácsolás",
+        "description": "A minőségi eredményhez",
+        "picture": "kulcs.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000014"
+        },
+        "name": "Mérőszalag",
+        "price": 3000,
+        "type": "Barkácsolás",
+        "description": "A minőségi eredményhez",
+        "picture": "Mérőszalag.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000015"
+        },
+        "name": "Fogó",
+        "price": 3000,
+        "type": "Barkácsolás",
+        "description": "A minőségi eredményhez",
+        "picture": "Fogó.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000016"
+        },
+        "name": "Kesztyű",
+        "price": 600,
+        "type": "Védőfelszerelések",
+        "description": "A biztonságért",
+        "picture": "Kesztyű.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000017"
+        },
+        "name": "Sisak",
+        "price": 3500,
+        "type": "Védőfelszerelések",
+        "description": "A biztonságért",
+        "picture": "Sisak.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000018"
+        },
+        "name": "Térdvédő",
+        "price": 3200,
+        "type": "Védőfelszerelések",
+        "description": "A biztonságért",
+        "picture": "Térdvédő.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000019"
+        },
+        "name": "Maszk",
+        "price": 400,
+        "type": "Védőfelszerelések",
+        "description": "A biztonságért",
+        "picture": "Maszk.webp"
+    },
+    {
+        "_id": {
+            "$oid": "b00000000000000000000020"
+        },
+        "name": "Védőszemüveg",
+        "price": 1200,
+        "type": "Védőfelszerelések",
+        "description": "A biztonságért",
+        "picture": "Védőszemüveg.webp"
     }
 ]
