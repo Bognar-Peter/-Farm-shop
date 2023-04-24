@@ -1,15 +1,18 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import { Types } from "mongoose";
-import validationMiddleware from "../middlewares/validation";
-import productModel from "./products.model";
+
+import HttpError from "../exceptions/HttpException";
+import IdNotValidException from "../exceptions/IdNotValidException";
+import Controller from "../interfaces/controller.interface";
+import authMiddleware from "../middlewares/auth.middleware";
+import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
+import validationMiddleware from "../middlewares/validation.middleware";
+import userModel from "../user/user.model";
 import CreateProductDto from "./products.dto";
-import Controller from "../interfaces/controller";
-import Product from "../interfaces/iproduct";
-import IdNotValidException from "../exceptions/IdNotValid";
-import HttpError from "../exceptions/Http";
-import authMiddleware from "../middlewares/auth";
-import getDataFromCookie from "../utils/dataFromCookie";
-import userModel from "../users/users.model";
+import IProduct from "./products.interface";
+import Product from "./products.interface";
+import productModel from "./products.model";
+
 export default class ProductController implements Controller {
     public path = "/products";
     public router = Router();
@@ -23,8 +26,12 @@ export default class ProductController implements Controller {
         this.router.get(this.path, this.getAllProducts);
         this.router.get(`${this.path}/:id`, this.getProductById);
         this.router.get(`${this.path}/:offset/:limit/:order/:sort/:keyword?`, this.getPaginatedProducts);
-        this.router.post(this.path, authMiddleware, this.createProduct);
-        this.router.patch(`${this.path}/:id`, [validationMiddleware(CreateProductDto, true), authMiddleware], this.modifyProduct);
+        this.router.post(this.path, [validationMiddleware(CreateProductDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createProduct);
+        this.router.patch(
+            `${this.path}/:id`,
+            [validationMiddleware(CreateProductDto, true), authMiddleware, roleCheckMiddleware(["admin"])],
+            this.modifyProduct,
+        );
         this.router.delete(`${this.path}/:id`, authMiddleware, this.deleteProductById);
     }
 
@@ -82,11 +89,7 @@ export default class ProductController implements Controller {
 
     private createProduct = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const userId = getDataFromCookie(req);
-            const user = await this.user.findById(userId);
-            if (user.role_name != "admin") return next(new HttpError(401, "You dont have permisson to do that!"));
-
-            const productData = req.body;
+            const productData: IProduct = req.body;
             const newproduct = await this.product.create({ ...productData });
             if (!newproduct) return next(new HttpError(400, "Failed to create product"));
             res.send(newproduct);
@@ -96,10 +99,6 @@ export default class ProductController implements Controller {
     };
     private modifyProduct = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const userId = getDataFromCookie(req);
-            const user = await this.user.findById(userId);
-            if (user.role_name != "admin") return next(new HttpError(401, "You dont have permisson to do that!"));
-
             const id = req.params.id;
             if (!Types.ObjectId.isValid(id)) return next(new IdNotValidException(id));
 
@@ -114,10 +113,6 @@ export default class ProductController implements Controller {
     };
     private deleteProductById = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const userId = getDataFromCookie(req);
-            const user = await this.user.findById(userId);
-            if (user.role_name != "admin") return next(new HttpError(401, "You dont have permisson to do that!"));
-
             const productId: string = req.params.id;
             // if (!(await isIdValid(this.product, [productId], next))) return;
 
