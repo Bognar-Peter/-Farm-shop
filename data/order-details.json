@@ -1,1 +1,30 @@
-[]
+[
+    {
+        "_id:"{
+            "$iod": "61dc02ebe397a1e9cf988b31"
+        },
+        "discount": 0.1,
+        "price": 50,
+        "quantity": 2,
+        "order_id": {
+            "$oid": "61dc02ebe397a1e9cf988b32"
+        },
+        "product_id": {
+            "$oid": "61dc02ebe397a1e9cf988b33"
+        }
+    },
+    {
+        "_id:" {
+            "$oid": "61dc03c0e397a1e9cf988b37"
+        },
+        "discount": 0,
+        "price": 100,
+        "quantity": 1,
+        "order_id": {
+            "$oid": "61dc03c0e397a1e9cf988b38"
+        },
+        "product_id": {
+            "$oid": "61dc03c0e397a1e9cf988b39"
+        }
+    }
+]
