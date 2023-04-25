@@ -7,7 +7,9 @@
         "price": 270,
         "type": "Vetőmagok",
         "description": "Az egészséges étkezéshez",
-        "picture": "Hagyma.webp"
+        "picture": "Hagyma.webp",
+        "unit": "db",
+        "weight": 200
     },
     {
         "_id": {
@@ -17,7 +19,9 @@
         "price": 230,
         "type": "Vetőmagok",
         "description": "Az egészséges étkezéshez",
-        "picture": "Sárgarépa.webp"
+        "picture": "Sárgarépa.webp",
+        "unit": "db",
+        "weight": 200
     },
     {
         "_id": {
@@ -27,8 +31,9 @@
         "price": 300,
         "type": "Vetőmagok",
         "description": "Az egészséges étkezéshez",
-        "picture": "Petrezselyem.webp"
-        
+        "picture": "Petrezselyem.webp",
+        "unit": "db",
+        "weight": 200
     },
     {
         "_id": {
@@ -38,7 +43,9 @@
         "price": 390,
         "type": "Vetőmagok",
         "description": "Az egészséges étkezéshez",
-        "picture": "Borsó.webp"
+        "picture": "Borsó.webp",
+        "unit": "db",
+        "weight": 200
     },
     {
         "_id": {
@@ -48,8 +55,9 @@
         "price": 330,
         "type": "Vetőmagok",
         "description": "Az egészséges étkezéshez",
-        "picture": "Karalábé.webp"
-        
+        "picture": "Karalábé.webp",
+        "unit": "db",
+        "weight": 200
     },
     {
         "_id": {
@@ -121,7 +129,7 @@
         "description": "A minőségi eredményhez",
         "picture": "Csavarhúzó.webp"
     },
-    {    
+    {
         "_id": {
             "$oid": "b00000000000000000000013"
         },

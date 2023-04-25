@@ -20,4 +20,12 @@ export default class CreateProductsDto {
     @IsNotEmpty()
     @IsString()
     public picture: string;
+
+    @IsNotEmpty()
+    @IsString()
+    public unit: string;
+
+    @IsNotEmpty()
+    @IsString()
+    public weight: string;
 }
