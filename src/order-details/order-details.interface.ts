@@ -1,6 +1,6 @@
 // import { Type } from "class-transformer";
 import { Schema } from "mongoose";
-export default interface IOrder {
+export default interface IOrderDetail {
     _id?: Schema.Types.ObjectId;
     name: string;
     address: string;

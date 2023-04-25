@@ -7,7 +7,7 @@ export default interface IOrder {
     orders_id?: Schema.Types.ObjectId;
     produts: [];
     produts_id?: Schema.Types.ObjectId;
-    discount: false;
+    discount: boolean;
     price: number;
     quantity: number;
 }
