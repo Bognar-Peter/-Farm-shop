@@ -5,7 +5,7 @@ import request, { Response, SuperAgentTest } from "supertest";
 
 import App from "../../app";
 import AuthenticationController from "../../auth/authentication.controller";
-import PartnerController from "../../partners/partners.controller";
+import OrderDetailController from "../../order-details/order-details.controller";
 import StatusCode from "../../utils/statusCodes";
 
 let server: Express;
@@ -14,15 +14,15 @@ const { USER_NAME, USER_PASS, ADMIN_NAME, ADMIN_PASS } = process.env;
 const id = "63aa1816fd8881c0d1b089d4";
 
 beforeAll(async () => {
-    server = new App([new AuthenticationController(), new PartnerController()]).getServer();
+    server = new App([new AuthenticationController(), new OrderDetailController()]).getServer();
 });
 
-describe("PARTNERS, not logged in", () => {
+describe("order-details, not logged in", () => {
     it("GET requests should return statuscode 200", async () => {
         expect.assertions(3);
-        const allResponse = await request(server).get(`/partners`);
-        const idResponse = await request(server).get(`/partners/${id}`);
-        const paginatedResponse = await request(server).get("/partners/offset/limit/order/sort/keyword");
+        const allResponse = await request(server).get(`/order-details`);
+        const idResponse = await request(server).get(`/order-details/${id}`);
+        const paginatedResponse = await request(server).get("/order-details/offset/limit/order/sort/keyword");
         expect(allResponse.statusCode).toBe(StatusCode.OK);
         expect(idResponse.statusCode).toBe(StatusCode.OK);
         expect(paginatedResponse.statusCode).toBe(StatusCode.OK);
@@ -30,16 +30,16 @@ describe("PARTNERS, not logged in", () => {
 
     it("POST, PATCH and DELETE requests should return statuscode 401", async () => {
         expect.assertions(3);
-        const createResponse = await request(server).post("/partners");
-        const patchResponse = await request(server).patch(`/partners/${id}`);
-        const deleteResponse = await request(server).delete(`/partners/${id}`);
+        const createResponse = await request(server).post("/order-details");
+        const patchResponse = await request(server).patch(`/order-details/${id}`);
+        const deleteResponse = await request(server).delete(`/order-details/${id}`);
         expect(createResponse.statusCode).toBe(StatusCode.Unauthorized);
         expect(patchResponse.statusCode).toBe(StatusCode.Unauthorized);
         expect(deleteResponse.statusCode).toBe(StatusCode.Unauthorized);
     });
 });
 
-describe("partners, logged in as admin", () => {
+describe("order-details, logged in as admin", () => {
     beforeAll(async () => {
         const res = await request(server).post("/auth/login").send({
             email: ADMIN_NAME,
@@ -48,33 +48,33 @@ describe("partners, logged in as admin", () => {
         cookie = res.headers["set-cookie"];
     });
 
-    it("GET /partners should return 200", async () => {
+    it("GET /order-details should return 200", async () => {
         expect.assertions(1);
-        const res = await request(server).get("/partners").set("Cookie", cookie);
+        const res = await request(server).get("/order-details").set("Cookie", cookie);
         expect(res.statusCode).toBe(StatusCode.OK);
     });
 
-    it("GET /partners/:id should return 200", async () => {
+    it("GET /order-details/:id should return 200", async () => {
         expect.assertions(1);
-        const res = await request(server).get(`/partners/${id}`).set("Cookie", cookie);
+        const res = await request(server).get(`/order-details/${id}`).set("Cookie", cookie);
         expect(res.statusCode).toBe(StatusCode.OK);
     });
 
-    it("GET /partners/:offset/:limit/:order/:sort/:keyword? should return 200", async () => {
+    it("GET /order-details/:offset/:limit/:order/:sort/:keyword? should return 200", async () => {
         expect.assertions(1);
-        const res = await request(server).get("/partners/offset/limit/order/sort/keyword").set("Cookie", cookie);
+        const res = await request(server).get("/order-details/offset/limit/order/sort/keyword").set("Cookie", cookie);
         expect(res.statusCode).toBe(StatusCode.OK);
     });
 
-    it("PATCH /partners/:id should return 200", async () => {
+    it("PATCH /order-details/:id should return 200", async () => {
         expect.assertions(1);
-        const res = await request(server).patch(`/partners/${id}`).set("Cookie", cookie).send({ order_date: Date.now });
+        const res = await request(server).patch(`/order-details/${id}`).set("Cookie", cookie).send({ order_date: Date.now });
         expect(res.statusCode).toBe(StatusCode.OK);
     });
 
-    /*it("DELETE /partners/:id should return 200", async () => {
+    /*it("DELETE /order-details/:id should return 200", async () => {
         expect.assertions(1);
-        const res = await request(server).patch(`/partners/${id}`).set("Cookie", cookie);
+        const res = await request(server).patch(`/order-details/${id}`).set("Cookie", cookie);
         expect(res.statusCode).toBe(StatusCode.OK);
     });*/
 });

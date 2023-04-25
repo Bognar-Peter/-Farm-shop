@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-import IPartner from "./ratings.interface";
+import IPartner from "./order-details.interface";
 
 const partnerSchema = new Schema<IPartner>(
     {

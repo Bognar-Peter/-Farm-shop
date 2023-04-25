@@ -8,10 +8,10 @@ import authMiddleware from "../middlewares/auth.middleware";
 import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
 import validationMiddleware from "../middlewares/validation.middleware";
 import userModel from "../user/user.model";
-import CreatePartnerDto from "./ratings.dto";
-import IPartner from "./ratings.interface";
-import Partner from "./ratings.interface";
-import PartnerModel from "./ratings.model";
+import CreatePartnerDto from "./order-details.dto";
+import IPartner from "./order-details.interface";
+import Partner from "./order-details.interface";
+import PartnerModel from "./order-details.model";
 
 export default class PartnerController implements Controller {
     public path = "/Partners";
