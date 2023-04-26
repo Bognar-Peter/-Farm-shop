@@ -3,9 +3,8 @@
         "_id": {
             "$oid": "61dc03c0e397a1e9cf988b37"
         },
-        "discount": 1,
         "price": 10000,
-        "quantity": 1,
+        "quantity": 3,
         "order_id": {
             "$oid": "61dc03c0e397a1e9cf988b38"
         },
@@ -17,9 +16,8 @@
         "_id": {
             "$oid": "61dc02ebe397a1e9cf988b31"
         },
-        "discount": 1,
-        "price": 10000,
-        "quantity": 1,
+        "price": 13000,
+        "quantity": 2,
         "order_id": {
             "$oid": "61dc02ebe397a1e9cf988b32"
         },
