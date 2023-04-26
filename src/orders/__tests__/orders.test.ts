@@ -1,13 +1,16 @@
-import request, { Response, SuperAgentTest } from "supertest";
+import "dotenv/config";
+
+import type { Express } from "express";
+import request from "supertest";
+
 import App from "../../app";
 import AuthenticationController from "../../authentication/authentication.controller";
 import OrderController from "../../orders/orders.controller";
 import StatusCode from "../../utils/statusCodes";
-import type { Express } from "express";
-import "dotenv/config";
 
-let server: Express;
+let server: Express.Application;
 let cookie: string | any;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { USER_NAME, USER_PASS, ADMIN_NAME, ADMIN_PASS } = process.env;
 const id = "63aa1816fd8881c0d1b089d4";
 

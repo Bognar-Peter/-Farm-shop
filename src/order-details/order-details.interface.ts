@@ -2,9 +2,8 @@
 import { Schema } from "mongoose";
 export default interface IOrderDetail {
     _id?: Schema.Types.ObjectId;
-    name: string;
-    address: string;
-    phone_number: string;
-    email: string;
-    users_id: Schema.Types.ObjectId;
+    price: number;
+    quantity: number;
+    order_id: Schema.Types.ObjectId;
+    product_id: Schema.Types.ObjectId;
 }

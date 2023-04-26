@@ -1,19 +1,24 @@
-import { IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsMongoId, IsNotEmpty, IsNumber, IsOptional } from "class-validator";
+import { Schema } from "mongoose";
 
-export default class CreateOrdersDto {
-    @IsNotEmpty()
-    @IsString()
-    public name: string;
+import IOrderDetail from "./order-details.interface";
+
+export default class CreateOrdersDto implements IOrderDetail {
+    @IsMongoId()
+    @IsOptional()
+    public _id: Schema.Types.ObjectId;
+
+    @IsMongoId()
+    public order_id: Schema.Types.ObjectId;
+
+    @IsMongoId()
+    public product_id: Schema.Types.ObjectId;
 
     @IsNotEmpty()
     @IsNumber()
-    public address: string;
+    public price: number;
 
     @IsNotEmpty()
-    @IsString()
-    public phone_number: string;
-
-    @IsNotEmpty()
-    @IsString()
-    public email: string;
+    @IsNumber()
+    public quantity: number;
 }
