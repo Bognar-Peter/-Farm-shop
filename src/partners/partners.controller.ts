@@ -25,7 +25,7 @@ export default class PartnerController implements Controller {
     private initializeRoutes() {
         this.router.get(this.path, this.getAllPartners);
         this.router.get(`${this.path}/:id`, this.getPartnerById);
-        this.router.get(`${this.path}/:offset/:limit/:partners/:sort/:keyword?`, this.getPaginatedPartners);
+        this.router.get(`${this.path}/:offset/:limit/:Partner/:sort/:keyword?`, this.getPaginatedPartners);
         this.router.post(this.path, [validationMiddleware(CreatePartnerDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createPartner);
         this.router.patch(
             `${this.path}/:id`,

@@ -25,7 +25,7 @@ export default class RatingController implements Controller {
     private initializeRoutes() {
         this.router.get(this.path, this.getAllRatings);
         this.router.get(`${this.path}/:id`, this.getRatingById);
-        this.router.get(`${this.path}/:offset/:limit/:ratings/:sort/:keyword?`, this.getPaginatedRatings);
+        this.router.get(`${this.path}/:offset/:limit/:Rating/:sort/:keyword?`, this.getPaginatedRatings);
         this.router.post(this.path, [validationMiddleware(CreateRatingDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createRating);
         this.router.patch(`${this.path}/:id`, [validationMiddleware(CreateRatingDto, true), authMiddleware, roleCheckMiddleware(["admin"])], this.modifyRating);
         this.router.delete(`${this.path}/:id`, authMiddleware, this.deleteRatingById);
