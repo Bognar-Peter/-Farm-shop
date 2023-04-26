@@ -12,7 +12,7 @@ const orderSchema = new Schema<IOrder>(
             ref: "Product",
             type: Schema.Types.ObjectId,
         },
-        orders_id: {
+        order_id: {
             ref: "Order",
             type: Schema.Types.ObjectId,
         },

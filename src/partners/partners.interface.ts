@@ -6,5 +6,5 @@ export default interface IPartner {
     address: string;
     phone_number: string;
     email: string;
-    users_id: Schema.Types.ObjectId;
+    user_id: Schema.Types.ObjectId;
 }

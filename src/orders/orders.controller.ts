@@ -25,7 +25,7 @@ export default class OrderController implements Controller {
     private initializeRoutes() {
         this.router.get(this.path, this.getAllorders);
         this.router.get(`${this.path}/:id`, this.getorderById);
-        this.router.get(`${this.path}/:offset/:limit/:order/:sort/:keyword?`, this.getPaginatedorders);
+        this.router.get(`${this.path}/:offset/:limit/:orders/:sort/:keyword?`, this.getPaginatedorders);
         this.router.post(this.path, [validationMiddleware(CreateOrderDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createorder);
         this.router.patch(
             `${this.path}/:id`,

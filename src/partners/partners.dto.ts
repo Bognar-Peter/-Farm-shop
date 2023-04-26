@@ -1,6 +1,7 @@
-import { IsNotEmpty, IsNumber, IsString, IsOptional, IsMongoId } from "class-validator";
-import IPartner from "./partners.interface";
+import { IsMongoId, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 import { Schema } from "mongoose";
+
+import IPartner from "./partners.interface";
 
 export default class CreatePartnerDto implements IPartner {
     @IsMongoId()
@@ -8,7 +9,7 @@ export default class CreatePartnerDto implements IPartner {
     public _id: Schema.Types.ObjectId;
 
     @IsMongoId()
-    public users_id: Schema.Types.ObjectId;
+    public user_id: Schema.Types.ObjectId;
 
     @IsNotEmpty()
     @IsString()

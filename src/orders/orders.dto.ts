@@ -1,5 +1,6 @@
-import { IsNotEmpty, IsNumber, IsString, IsMongoId, IsOptional } from "class-validator";
+import { IsMongoId, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 import { Schema } from "mongoose";
+
 import IOrder from "./orders.interface";
 
 export default class CreateOrderDto implements IOrder {
@@ -23,7 +24,7 @@ export default class CreateOrderDto implements IOrder {
 
     @IsNotEmpty()
     @IsString()
-    public discount: Boolean;
+    public discount: boolean;
 
     @IsNotEmpty()
     @IsString()

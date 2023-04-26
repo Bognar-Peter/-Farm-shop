@@ -14,7 +14,7 @@ import Rating from "./ratings.interface";
 import RatingModel from "./ratings.model";
 
 export default class RatingController implements Controller {
-    public path = "/Ratings";
+    public path = "/ratings";
     public router = Router();
     private Rating = RatingModel;
     private user = userModel;
@@ -25,7 +25,7 @@ export default class RatingController implements Controller {
     private initializeRoutes() {
         this.router.get(this.path, this.getAllRatings);
         this.router.get(`${this.path}/:id`, this.getRatingById);
-        this.router.get(`${this.path}/:offset/:limit/:Rating/:sort/:keyword?`, this.getPaginatedRatings);
+        this.router.get(`${this.path}/:offset/:limit/:ratings/:sort/:keyword?`, this.getPaginatedRatings);
         this.router.post(this.path, [validationMiddleware(CreateRatingDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createRating);
         this.router.patch(
             `${this.path}/:id`,

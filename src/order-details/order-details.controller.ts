@@ -7,115 +7,114 @@ import Controller from "../interfaces/controller.interface";
 import authMiddleware from "../middlewares/auth.middleware";
 import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
 import validationMiddleware from "../middlewares/validation.middleware";
-import userModel from "../user/user.model";
-import CreatePartnerDto from "./order-details.dto";
-import IPartner from "./order-details.interface";
-import Partner from "./order-details.interface";
-import PartnerModel from "./order-details.model";
+// import userModel from "../user/user.model";
+import CreateOrderDetailsDto from "./order-details.dto";
+import IOrderDetails from "./order-details.interface";
+import OrderDetails from "./order-details.model";
 
-export default class PartnerController implements Controller {
-    public path = "/Partners";
+export default class OrderDetailController implements Controller {
+    public path = "/order-details";
     public router = Router();
-    private Partner = PartnerModel;
-    private user = userModel;
+    private OrderDetail = OrderDetails;
+    // private user = userModel;
     constructor() {
         this.initializeRoutes();
     }
 
     private initializeRoutes() {
-        this.router.get(this.path, this.getAllPartners);
-        this.router.get(`${this.path}/:id`, this.getPartnerById);
-        this.router.get(`${this.path}/:offset/:limit/:Partner/:sort/:keyword?`, this.getPaginatedPartners);
-        this.router.post(this.path, [validationMiddleware(CreatePartnerDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createPartner);
+        this.router.get(this.path, this.getAllOrderDetails);
+        this.router.get(`${this.path}/:id`, this.getOrderDetailById);
+        this.router.get(`${this.path}/:offset/:limit/:order-details/:sort/:keyword?`, this.getPaginatedOrderDetails);
+        this.router.post(this.path, [validationMiddleware(CreateOrderDetailsDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createOrderDetail);
         this.router.patch(
             `${this.path}/:id`,
-            [validationMiddleware(CreatePartnerDto, true), authMiddleware, roleCheckMiddleware(["admin"])],
-            this.modifyPartner,
+            [validationMiddleware(CreateOrderDetailsDto, true), authMiddleware, roleCheckMiddleware(["admin"])],
+            this.modifyOrderDetail,
         );
-        this.router.delete(`${this.path}/:id`, authMiddleware, this.deletePartnerById);
+        this.router.delete(`${this.path}/:id`, authMiddleware, this.deleteOrderDetailById);
     }
 
-    private getAllPartners = async (req: Request, res: Response, next: NextFunction) => {
+    private getAllOrderDetails = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const Partners = await this.Partner.find();
-            res.send(Partners);
+            const OrderDetails = await this.OrderDetail.find();
+            res.send(OrderDetails);
         } catch (error) {
             next(new HttpError(400, error.message));
         }
     };
-    private getPaginatedPartners = async (req: Request, res: Response, next: NextFunction) => {
+    private getPaginatedOrderDetails = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const offset = parseInt(req.params.offset);
             const limit = parseInt(req.params.limit);
-            const Partner = req.params.Partner; // Partner?
+            const OrderDetail = req.params.OrderDetail; // OrderDetail?
             const sort = parseInt(req.params.sort); // desc: -1  asc: 1
-            let Partners = [];
+            let OrderDetails = [];
             let count = 0;
             if (req.params.keyword) {
                 const regex = new RegExp(req.params.keyword, "i"); // i for case insensitive
-                count = await this.Partner.find({ $or: [{ PartnerName: { $regex: regex } }, { description: { $regex: regex } }] }).count();
-                Partners = await this.Partner.find({ $or: [{ PartnerName: { $regex: regex } }, { description: { $regex: regex } }] })
-                    .sort(`${sort == -1 ? "-" : ""}${Partner}`)
+                count = await this.OrderDetail.find({ $or: [{ OrderDetailName: { $regex: regex } }, { description: { $regex: regex } }] }).count();
+                OrderDetails = await this.OrderDetail.find({ $or: [{ OrderDetailName: { $regex: regex } }, { description: { $regex: regex } }] })
+                    .sort(`${sort == -1 ? "-" : ""}${OrderDetail}`)
                     .skip(offset)
                     .limit(limit);
             } else {
-                count = await this.Partner.countDocuments();
-                Partners = await this.Partner.find({})
-                    .sort(`${sort == -1 ? "-" : ""}${Partner}`)
+                count = await this.OrderDetail.countDocuments();
+                OrderDetails = await this.OrderDetail.find({})
+                    .sort(`${sort == -1 ? "-" : ""}${OrderDetail}`)
                     .skip(offset)
                     .limit(limit);
             }
-            res.send({ count: count, Partners: Partners });
+            res.send({ count: count, OrderDetails: OrderDetails });
         } catch (error) {
             next(new HttpError(400, error.message));
         }
     };
 
-    private getPartnerById = async (req: Request, res: Response, next: NextFunction) => {
+    private getOrderDetailById = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const id: string = req.params.id;
-            // if (!(await isIdValid(this.Partner, [PartnerId], next))) return;
+            // if (!(await isIdValid(this.OrderDetail, [OrderDetailId], next))) return;
 
-            const Partner = await this.Partner.findById(id);
-            if (!Partner) return next(new HttpError(404, `Failed to get Partner by id ${id}`));
+            const OrderDetail = await this.OrderDetail.findById(id);
+            if (!OrderDetail) return next(new HttpError(404, `Failed to get OrderDetail by id ${id}`));
 
-            res.send(Partner);
+            res.send(OrderDetail);
         } catch (error) {
             next(new HttpError(400, error.message));
         }
     };
 
-    private createPartner = async (req: Request, res: Response, next: NextFunction) => {
+    private createOrderDetail = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const PartnerData: IPartner = req.body;
-            const newPartner = await this.Partner.create({ ...PartnerData });
-            if (!newPartner) return next(new HttpError(400, "Failed to create Partner"));
-            res.send(newPartner);
+            const OrderDetailData: IOrderDetails = req.body;
+            const newOrderDetail = await this.OrderDetail.create({ ...OrderDetailData });
+            if (!newOrderDetail) return next(new HttpError(400, "Failed to create OrderDetail"));
+            res.send(newOrderDetail);
         } catch (error) {
             next(new HttpError(400, error.message));
         }
     };
-    private modifyPartner = async (req: Request, res: Response, next: NextFunction) => {
+    private modifyOrderDetail = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const id = req.params.id;
             if (!Types.ObjectId.isValid(id)) return next(new IdNotValidException(id));
 
-            const PartnerData: Partner = req.body;
-            const Partner = await this.Partner.findByIdAndUpdate(id, PartnerData, { new: true });
-            //if (!Partner) return next(new UserNotFoundException(id));
+            const OrderDetailData: IOrderDetails = req.body;
+            const OrderDetail = await this.OrderDetail.findByIdAndUpdate(id, OrderDetailData, { new: true });
+            //if (!OrderDetail) return next(new UserNotFoundException(id));
 
-            res.send(Partner);
+            res.send(OrderDetail);
         } catch (error) {
             next(new HttpError(400, error.message));
         }
     };
-    private deletePartnerById = async (req: Request, res: Response, next: NextFunction) => {
+    private deleteOrderDetailById = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const PartnerId: string = req.params.id;
-            // if (!(await isIdValid(this.Partner, [PartnerId], next))) return;
+            const OrderDetailId: string = req.params.id;
+            // if (!(await isIdValid(this.OrderDetail, [OrderDetailId], next))) return;
 
-            const response = await this.Partner.findByIdAndDelete(PartnerId);
-            if (!response) return next(new HttpError(404, `Failed to delete Partner by id ${PartnerId}`));
+            const response = await this.OrderDetail.findByIdAndDelete(OrderDetailId);
+            if (!response) return next(new HttpError(404, `Failed to delete OrderDetail by id ${OrderDetailId}`));
 
             res.sendStatus(200);
         } catch (error) {
