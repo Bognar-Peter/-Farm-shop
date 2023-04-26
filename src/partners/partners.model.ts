@@ -11,7 +11,7 @@ const partnerSchema = new Schema<IPartner>(
         user_id: {
             ref: "User",
             type: Schema.Types.ObjectId,
-        }
+        },
     },
     { versionKey: false, timestamps: true },
 );

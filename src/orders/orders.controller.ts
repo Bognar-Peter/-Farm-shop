@@ -7,7 +7,7 @@ import Controller from "../interfaces/controller.interface";
 import authMiddleware from "../middlewares/auth.middleware";
 import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
 import validationMiddleware from "../middlewares/validation.middleware";
-import userModel from "../user/user.model";
+// import userModel from "../user/user.model";
 import CreateOrderDto from "./orders.dto";
 import IOrder from "./orders.interface";
 import Order from "./orders.interface";
@@ -17,21 +17,26 @@ export default class OrderController implements Controller {
     public path = "/orders";
     public router = Router();
     private order = orderModel;
-    private user = userModel;
+    // private user = userModel;
     constructor() {
         this.initializeRoutes();
     }
 
     private initializeRoutes() {
+        // CRUD
+        // R:
         this.router.get(this.path, this.getAllorders);
         this.router.get(`${this.path}/:id`, this.getorderById);
+<<<<<<< HEAD
         this.router.get(`${this.path}/:offset/:limit/:orders/:sort/:keyword?`, this.getPaginatedorders);
+=======
+        this.router.get(`${this.path}/:offset/:limit/:order/:sort/:keyword?`, this.getPaginatedorders);
+        // C:
+>>>>>>> ae9c0b6bee11cdc03cd3572600df0502dc033019
         this.router.post(this.path, [validationMiddleware(CreateOrderDto), authMiddleware, roleCheckMiddleware(["admin"])], this.createorder);
-        this.router.patch(
-            `${this.path}/:id`,
-            [validationMiddleware(CreateOrderDto, true), authMiddleware, roleCheckMiddleware(["admin"])],
-            this.modifyorder,
-        );
+        // U:
+        this.router.patch(`${this.path}/:id`, [validationMiddleware(CreateOrderDto, true), authMiddleware, roleCheckMiddleware(["admin"])], this.modifyorder);
+        // D:
         this.router.delete(`${this.path}/:id`, authMiddleware, this.deleteorderById);
     }
 
