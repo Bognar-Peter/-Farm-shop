@@ -4,16 +4,10 @@ import IOrder from "./orders.interface";
 
 const orderSchema = new Schema<IOrder>(
     {
-        price: Number,
-        quantity: Number,
         ship_date: String,
         order_date: String,
-        product_id: {
-            ref: "Product",
-            type: Schema.Types.ObjectId,
-        },
-        orders_id: {
-            ref: "Order",
+        user_id: {
+            ref: "User",
             type: Schema.Types.ObjectId,
         },
     },

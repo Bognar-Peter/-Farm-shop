@@ -6,15 +6,15 @@ const ratingSchema = new Schema<IRating>(
     {
         star: Number,
         comment: String,
-        users_id {
+        user_id: {
             ref: "User",
             type: Schema.Types.ObjectId,
         },
-        partners_id {
+        partner_id: {
             ref: "Partner",
             type: Schema.Types.ObjectId,
         },
-        product_id {
+        product_id: {
             ref: "Product",
             type: Schema.Types.ObjectId,
         },

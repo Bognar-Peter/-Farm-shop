@@ -8,10 +8,10 @@ const partnerSchema = new Schema<IPartner>(
         address: String,
         email: String,
         phone_number: String,
-        users_id: {
+        user_id: {
             ref: "User",
             type: Schema.Types.ObjectId,
-        }
+        },
     },
     { versionKey: false, timestamps: true },
 );

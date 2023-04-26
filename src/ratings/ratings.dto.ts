@@ -1,6 +1,7 @@
-import { IsNotEmpty, IsNumber, IsString, IsMongoId, IsOptional } from "class-validator";
-import IRating from "./ratings.interface";
+import { IsMongoId, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 import { Schema } from "mongoose";
+
+import IRating from "./ratings.interface";
 
 export default class CreateRatingDto implements IRating {
     @IsMongoId()
@@ -8,10 +9,10 @@ export default class CreateRatingDto implements IRating {
     public _id: Schema.Types.ObjectId;
 
     @IsMongoId()
-    public users_id: Schema.Types.ObjectId;
+    public user_id: Schema.Types.ObjectId;
 
     @IsMongoId()
-    public partners_id: Schema.Types.ObjectId;
+    public partner_id: Schema.Types.ObjectId;
 
     @IsMongoId()
     public product_id: Schema.Types.ObjectId;

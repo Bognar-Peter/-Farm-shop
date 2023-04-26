@@ -4,7 +4,7 @@ export default interface IRating {
     _id?: Schema.Types.ObjectId;
     star: number;
     comment: string;
-    users_id: Schema.Types.ObjectId;
-    partners_id: Schema.Types.ObjectId;
+    user_id: Schema.Types.ObjectId;
+    partner_id: Schema.Types.ObjectId;
     product_id: Schema.Types.ObjectId;
 }
