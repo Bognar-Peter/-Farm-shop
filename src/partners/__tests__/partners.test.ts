@@ -4,7 +4,7 @@ import type { Express } from "express";
 import request, { Response, SuperAgentTest } from "supertest";
 
 import App from "../../app";
-import AuthenticationController from "../../auth/authentication.controller";
+import AuthenticationController from "../../authentication/authentication.controller";
 import PartnerController from "../../partners/partners.controller";
 import StatusCode from "../../utils/statusCodes";
 

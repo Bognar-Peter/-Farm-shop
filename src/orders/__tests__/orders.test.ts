@@ -1,6 +1,6 @@
 import request, { Response, SuperAgentTest } from "supertest";
 import App from "../../app";
-import AuthenticationController from "../../auth/authentication.controller";
+import AuthenticationController from "../../authentication/authentication.controller";
 import OrderController from "../../orders/orders.controller";
 import StatusCode from "../../utils/statusCodes";
 import type { Express } from "express";
