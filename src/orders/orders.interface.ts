@@ -5,7 +5,6 @@ export default interface IOrder {
     ship_date: Date;
     order_date: Date;
     orders_id?: Schema.Types.ObjectId;
-    produts: [];
     produts_id?: Schema.Types.ObjectId;
     discount: boolean;
     price: number;

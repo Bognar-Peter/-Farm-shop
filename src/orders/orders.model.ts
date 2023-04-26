@@ -4,11 +4,18 @@ import IOrder from "./orders.interface";
 
 const orderSchema = new Schema<IOrder>(
     {
-        ship_date: Date,
-        order_date: Date,
-        // discount: False,
         price: Number,
-        quantity: Number
+        quantity: Number,
+        ship_date: String,
+        order_date: String,
+        product_id: {
+            ref: "Product",
+            type: Schema.Types.ObjectId,
+        },
+        orders_id: {
+            ref: "Order",
+            type: Schema.Types.ObjectId,
+        },
     },
     { versionKey: false, timestamps: true },
 );
