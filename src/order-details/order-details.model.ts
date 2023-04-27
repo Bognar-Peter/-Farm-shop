@@ -6,10 +6,11 @@ import IOrderDetail from "./order-details.interface";
 const orderdetailSchema = new Schema<IOrderDetail>(
     {
         price: Number,
-        quantity: {
-            type: Number,
-            min: [1, "A megrendelt mennyidség nullánál nagyobb"],
-        },
+        quantity: Number,
+        // quantity: {
+        //     type: Number,
+        //     min: [1, "A megrendelt mennyidség nullánál nagyobb"], Így is meg lehet csinálni
+        // },
         order_id: {
             ref: "Order",
             type: Schema.Types.ObjectId,
