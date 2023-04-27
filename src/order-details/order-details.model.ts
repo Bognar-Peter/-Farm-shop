@@ -3,7 +3,7 @@ import { model, Schema } from "mongoose";
 import IOrderDetail from "./order-details.interface";
 
 // https://mongoosejs.com/docs/validation.html
-const partnerSchema = new Schema<IOrderDetail>(
+const orderdetailSchema = new Schema<IOrderDetail>(
     {
         price: Number,
         quantity: {
@@ -22,6 +22,6 @@ const partnerSchema = new Schema<IOrderDetail>(
     { versionKey: false, timestamps: true },
 );
 
-const partnerModel = model<IOrderDetail>("Partner", partnerSchema, "partners");
+const orderdetailModel = model<IOrderDetail>("OrderDetail", orderdetailSchema, "order-details");
 
-export default partnerModel;
+export default orderdetailModel;
