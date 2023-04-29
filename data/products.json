@@ -3,210 +3,300 @@
         "_id": {
             "$oid": "a00000000000000000000001"
         },
-        "name": "Hagyma",
-        "price": 270,
-        "type": "Vetőmagok",
-        "description": "Az egészséges étkezéshez",
+        "name": "LPE KPE öntözőcső 6 bar 10m",
+        "price": 2000,
+        "type": "Csövek",
+        "description": "Kiszáradás elleni védelem",
         "picture": "Hagyma.webp",
-        "unit": "db",
-        "weight": 200
+        "unit": "kg/m",
+        "weight": 4
     },
     {
         "_id": {
             "$oid": "a00000000000000000000002"
         },
-        "name": "Sárgarépa",
-        "price": 230,
-        "type": "Vetőmagok",
-        "description": "Az egészséges étkezéshez",
+        "name": "LPE KPE öntözőcső 6 bar 50m",
+        "price": 9000,
+        "type": "Csövek",
+        "description": "Kiszáradás elleni védelem",
         "picture": "Sárgarépa.webp",
-        "unit": "db",
-        "weight": 200
+        "unit": "kg/m",
+        "weight": 20
     },
     {
         "_id": {
             "$oid": "a00000000000000000000003"
         },
-        "name": "Petrezselyem",
-        "price": 300,
-        "type": "Vetőmagok",
-        "description": "Az egészséges étkezéshez",
+        "name": "LPE KPE öntözőcső 6 bar 100m",
+        "price": 20000,
+        "type": "Csövek",
+        "description": "Kiszáradás elleni védelem",
         "picture": "Petrezselyem.webp",
-        "unit": "db",
-        "weight": 200
+        "unit": "kg/m",
+        "weight": 40
     },
     {
         "_id": {
             "$oid": "a00000000000000000000004"
         },
-        "name": "Borsó",
-        "price": 390,
-        "type": "Vetőmagok",
-        "description": "Az egészséges étkezéshez",
+        "name": "LPE KPE öntözőcső 6 bar 250m",
+        "price": 41000,
+        "type": "Csövek",
+        "description": "Kiszáradás elleni védelem",
         "picture": "Borsó.webp",
-        "unit": "db",
-        "weight": 200
+        "unit": "kg/m",
+        "weight": 100
     },
     {
         "_id": {
             "$oid": "a00000000000000000000005"
         },
-        "name": "Karalábé",
-        "price": 330,
-        "type": "Vetőmagok",
-        "description": "Az egészséges étkezéshez",
+        "name": "LPE KPE öntözőcső 6 bar 500m",
+        "price": 80000,
+        "type": "Csövek",
+        "description": "Kiszáradás elleni védelem",
         "picture": "Karalábé.webp",
-        "unit": "db",
+        "unit": "kg/m",
         "weight": 200
     },
     {
         "_id": {
             "$oid": "a00000000000000000000006"
         },
-        "name": "Lapát",
-        "price": 2300,
-        "type": "Szerszámok",
-        "description": "A nehéz munkálatokhoz",
-        "picture": "Lapát.webp"
+        "name": "LPE toldó",
+        "price": 200,
+        "type": "Csatlakozó idomok",
+        "description": "Csövek toldása, elágaztatása",
+        "picture": "Lapát.webp",
+        "unit": "g",
+        "weight": 2
     },
     {
         "_id": {
             "$oid": "a00000000000000000000007"
         },
-        "name": "Gereblye",
-        "price": 3500,
-        "type": "Szerszámok",
-        "description": "A nehéz munkálatokhoz",
-        "picture": "Gereblye.webp"
+        "name": "LPE egyenes szűkítő toldó",
+        "price": 300,
+        "type": "Csatlakozó idomok",
+        "description": "Csövek toldása, elágaztatása",
+        "picture": "Gereblye.webp",
+        "unit": "g",
+        "weight": 2.5
     },
     {
         "_id": {
             "$oid": "a00000000000000000000008"
         },
-        "name": "Seprű",
-        "price": 15320,
-        "type": "Szerszámok",
-        "description": "A nehéz munkálatokhoz",
-        "picture": "Seprű.webp"
+        "name": "LPE könyök",
+        "price": 250,
+        "type": "Csatlakozó idomok",
+        "description": "Csövek toldása, elágaztatása",
+        "picture": "Seprű.webp",
+        "unit": "g",
+        "weight": 3
     },
     {
         "_id": {
             "$oid": "a00000000000000000000009"
         },
-        "name": "Ásó",
-        "price": 5000,
-        "type": "Szerszámok",
-        "description": "A nehéz munkálatokhoz",
-        "picture": "Ásó.webp"
+        "name": "LPE T",
+        "price": 350,
+        "type": "Csatlakozó idomok",
+        "description": "Csövek toldása, elágaztatása",
+        "picture": "Ásó.webp",
+        "unit": "g",
+        "weight": 2
     },
     {
         "_id": {
             "$oid": "a00000000000000000000010"
         },
-        "name": "Csákány",
-        "price": 6000,
-        "type": "Szerszámok",
-        "description": "A nehéz munkálatokhoz",
-        "picture": "Csákány.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000011"
-        },
-        "name": "Kalapács",
-        "price": 6500,
-        "type": "Barkácsolás",
-        "description": "A minőségi eredményhez",
-        "picture": "Kalapács.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000012"
-        },
-        "name": "Csavarhuzó",
-        "price": 4000,
-        "type": "Barkácsolás",
-        "description": "A minőségi eredményhez",
-        "picture": "Csavarhúzó.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000013"
-        },
-        "name": "Csillag-villás kulcs",
-        "price": 3000,
-        "type": "Barkácsolás",
-        "description": "A minőségi eredményhez",
-        "picture": "kulcs.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000014"
-        },
-        "name": "Mérőszalag",
-        "price": 3000,
-        "type": "Barkácsolás",
-        "description": "A minőségi eredményhez",
-        "picture": "Mérőszalag.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000015"
-        },
-        "name": "Fogó",
-        "price": 3000,
-        "type": "Barkácsolás",
-        "description": "A minőségi eredményhez",
-        "picture": "Fogó.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000016"
-        },
-        "name": "Kesztyű",
-        "price": 600,
-        "type": "Védőfelszerelések",
-        "description": "A biztonságért",
-        "picture": "Kesztyű.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000017"
-        },
-        "name": "Sisak",
-        "price": 3500,
-        "type": "Védőfelszerelések",
-        "description": "A biztonságért",
-        "picture": "Sisak.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000018"
-        },
-        "name": "Térdvédő",
-        "price": 3200,
-        "type": "Védőfelszerelések",
-        "description": "A biztonságért",
-        "picture": "Térdvédő.webp"
-    },
-    {
-        "_id": {
-            "$oid": "b00000000000000000000019"
-        },
-        "name": "Maszk",
+        "name": "Cső indító",
         "price": 400,
-        "type": "Védőfelszerelések",
-        "description": "A biztonságért",
-        "picture": "Maszk.webp"
+        "type": "Csatlakozó idomok",
+        "description": "Csövek toldása, elágaztatása",
+        "picture": "Csákány.webp",
+        "unit": "g",
+        "weight": 5
     },
     {
         "_id": {
-            "$oid": "b00000000000000000000020"
+            "$oid": "a00000000000000000000011"
         },
-        "name": "Védőszemüveg",
-        "price": 1200,
-        "type": "Védőfelszerelések",
-        "description": "A biztonságért",
-        "picture": "Védőszemüveg.webp"
+        "name": "Leo vízszivattyú",
+        "price": 50000,
+        "type": "Szívattyúk",
+        "description": "Vízmozgatás",
+        "picture": "Kalapács.webp",
+        "unit": "kg",
+        "weight": 18
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000012"
+        },
+        "name": "Leo centrifugál szivattyú",
+        "price": 40000,
+        "type": "Szívattyúk",
+        "description": "Vízmozgatás",
+        "picture": "Csavarhúzó.webp",
+        "unit": "kg",
+        "weight": 20
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000013"
+        },
+        "name": "Leo periférikus szivattyú",
+        "price": 25000,
+        "type": "Szivattyúk",
+        "description": "Vízmozgatás",
+        "picture": "kulcs.webp",
+        "unit": "kg",
+        "weight": 15
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000014"
+        },
+        "name": "Benzismotoros szivattyú",
+        "price": 3000,
+        "type": "Szívattyúk",
+        "description": "Vízmozgatás",
+        "picture": "Mérőszalag.webp",
+        "unit": "kg",
+        "weight": 30
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000015"
+        },
+        "name": "Búvárszivattyú",
+        "price": 3000,
+        "type": "Szívattyúk ",
+        "description": "Vízmozgatás",
+        "picture": "Fogó.webp",
+        "unit": "kg",
+        "weight": 13
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000016"
+        },
+        "name": "O-gyűrű",
+        "price": 140,
+        "type": "Gumigyűrűk",
+        "description": "A vízveszteség csökkentése",
+        "picture": "Kesztyű.webp",
+        "unit": "g",
+        "weight": 20
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000017"
+        },
+        "name": "X-gyűrű",
+        "price": 170,
+        "type": "Gumigyűrűk",
+        "description": "A vízveszteség csökkentése",
+        "picture": "Sisak.webp",
+        "unit": "g",
+        "weight": 15
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000018"
+        },
+        "name": "V-gyűrű",
+        "price": 200,
+        "type": "Gumigyűrűk",
+        "description": "A vízveszteség csökkentése",
+        "picture": "Térdvédő.webp",
+        "unit": "g",
+        "weight": 12
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000019"
+        },
+        "name": "T-gyűrű",
+        "price": 300,
+        "type": "Gumigyűrűk",
+        "description": "A vízveszteség csökkentése",
+        "picture": "Maszk.webp",
+        "unit": "g",
+        "weight": 25
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000020"
+        },
+        "name": "Karimagyűrű",
+        "price": 350,
+        "type": "Gumigyűrűk",
+        "description": "A vízveszteség csökkentése",
+        "picture": "Védőszemüveg.webp",
+        "unit": "g",
+        "weight": 10
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000021"
+        },
+        "name": "Hunter",
+        "price": 650,
+        "type": "Szórófejek",
+        "description": "Öntözés minőségét befolyásoló alkatrészek",
+        "picture": "Védőszemüveg.webp",
+        "unit": "col",
+        "weight": 0.5
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000022"
+        },
+        "name": "K-Rain",
+        "price": 600,
+        "type": "Szórófejek",
+        "description": "Öntözés minőségét befolyásoló alkatrészek",
+        "picture": "Védőszemüveg.webp",
+        "unit": "col",
+        "weight": 3
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000023"
+        },
+        "name": "Rain Bird",
+        "price": 730,
+        "type": "Szórófejek",
+        "description": "Öntözés minőségét befolyásoló alkatrészek",
+        "picture": "Védőszemüveg.webp",
+        "unit": "col",
+        "weight": 0.5
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000024"
+        },
+        "name": "Toro",
+        "price": 1250,
+        "type": "Szórófejek",
+        "description": "Öntözés minőségét befolyásoló alkatrészek",
+        "picture": "Védőszemüveg.webp",
+        "unit": "col",
+        "weight": 0.5
+    },
+    {
+        "_id": {
+            "$oid": "a00000000000000000000025"
+        },
+        "name": "Irritol",
+        "price": 900,
+        "type": "Szórófejek",
+        "description": "Öntözés minőségét befolyásoló alkatrészek",
+        "picture": "Védőszemüveg.webp",
+        "unit": "col",
+        "weight": 0.75
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "_id": {
-            "$oid": "61dc02ebe397a1e9cf988b31"
+            "$oid": "d00000000000000000000001"
         },
         "name": "partner001",
         "address": "Mintapartner22",
@@ -9,13 +9,13 @@
         "phone_number": "0845879555164",
         "users_id": [
             {
-                "$oid": "61b5f09cf39e4edcf5b8a3d4"
+                "$oid": "f00000000000000000000006"
             }
         ]
     },
     {
         "_id": {
-            "$oid": "61dc03c0e397a1e9cf988b37"
+            "$oid": "d00000000000000000000002"
         },
         "name": "partner002",
         "address": "Mintapartner23",
@@ -23,7 +23,7 @@
         "phone_number": "0845879555153",
         "users_id": [
             {
-                "$oid": "61b5f048f39e4edcf5b8a3ca"
+                "$oid": "f00000000000000000000007"
             }
         ]
     }

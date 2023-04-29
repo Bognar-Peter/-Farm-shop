@@ -1,15 +1,15 @@
 [
     {
         "_id": {
-            "$oid": "61dc0232e397a1e9cf988b2b"
+            "$oid": "e00000000000000000000001"
         },
         "star": 5,
         "commment": "valami1",
         "users_id": {
-            "$oid": "61b5f0c1f39e4edcf5b8a3d8"
+            "$oid": "f00000000000000000000003"
         },
         "partners_id": {
-            "$oid": "61dc02ebe397a1e9cf988b31"
+            "$oid": "d00000000000000000000001"
         },
         "product_id": {
             "$oid": "a00000000000000000000002"
@@ -17,15 +17,15 @@
     },
     {
         "_id": {
-            "$oid": "61dc02ebe397a1e9cf988b31"
+            "$oid": "e00000000000000000000002"
         },
         "star": 6,
         "commment": "valami2",
         "users_id": {
-            "$oid": "61b5e9c0f39e4edcf5b8a3b9"
+            "$oid": "f00000000000000000000005"
         },
         "partners_id": {
-            "$oid": "61dc03c0e397a1e9cf988b37"
+            "$oid": "d00000000000000000000002"
         },
         "product_id": {
             "$oid": "a00000000000000000000001"
