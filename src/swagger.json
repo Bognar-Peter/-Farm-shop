@@ -431,6 +431,602 @@
                 }
             }
         },
+        "/products": {
+            "get": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "Összes product lekérdezése.",
+                "description": "Az összes product adatát tudjuk lekérdezni.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/product"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "product": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "Új product mentése.",
+                "description": "Új product mentése a 'product' táblában",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (Az új, elmentett posttal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/products/{id}": {
+            "get": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "Egy product lekérdezése.",
+                "description": "Az id paraméterben megadott product adatait kérdezhetjük le.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A product azonosítója.",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "a00000000000000000000018"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Ezzel az azonosítóval (id) nincs product!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "product módosítása (PATCH).",
+                "description": "A paraméterben megadott product adatait módosítja a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PATCH metódussal módosítandó product azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "a00000000000000000000018"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított post adatokkal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott product (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "product módosítása (PUT).",
+                "description": "A paraméterben megadott product adatait módosítja a végpont PUT metódussal.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PUT metódussal módosítandó product azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "a00000000000000000000018"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított product adataival tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott product (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "products"
+                ],
+                "summary": "product törlése.",
+                "description": "A paraméterben megadott productot törli a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A törlendő product azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "a00000000000000000000018"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK (A product törölve.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "OK"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott product (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orders": {
+            "get": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "Összes order lekérdezése.",
+                "description": "Az összes order adatát tudjuk lekérdezni.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/order"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "order": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "Új order mentése.",
+                "description": "Új order mentése a 'order' táblában",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (Az új, elmentett orderel tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/orders/{id}": {
+            "get": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "Egy order lekérdezése.",
+                "description": "Az id paraméterben megadott order adatait kérdezhetjük le.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A order azonosítója.",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "c00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Ezzel az azonosítóval (id) nincs order!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "order módosítása (PATCH).",
+                "description": "A paraméterben megadott order adatait módosítja a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PATCH metódussal módosítandó order azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "c00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított order adatokkal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "order módosítása (PUT).",
+                "description": "A paraméterben megadott order adatait módosítja a végpont PUT metódussal.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PUT metódussal módosítandó order azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "c00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított order adataival tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "order törlése.",
+                "description": "A paraméterben megadott ordert törli a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A törlendő order azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "c00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK (A order törölve.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "OK"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/authors": {
             "get": {
                 "tags": [
@@ -1316,6 +1912,54 @@
                         "maxLength": 50,
                         "description": "A post címe címe.",
                         "example": "Millió dolláros bébi 2004"
+                    }
+                }
+            },
+            "product": {
+                "type": "object",
+                "required": [
+                    "title"
+                ],
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "PK - A product azonosítója (ObjectID).",
+                        "example": "a00000000000000000000018"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "A product tartalma.",
+                        "example": "Sok féle termék közül lehet válogatni!"
+                    },
+                    "title": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "A product címe címe.",
+                        "example": "Terméklesen"
+                    }
+                }
+            },
+            "order": {
+                "type": "object",
+                "required": [
+                    "title"
+                ],
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "PK - A order azonosítója (ObjectID).",
+                        "example": "a00000000000000000000018"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "A order tartalma.",
+                        "example": "Megrendelését minden erőnkkel azon vagyunk hogy minél hamarabb az ön kezébe adhatsuk!"
+                    },
+                    "title": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "A order címe címe.",
+                        "example": "Megrendelések megtekintése"
                     }
                 }
             },
