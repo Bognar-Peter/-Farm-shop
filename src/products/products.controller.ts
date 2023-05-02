@@ -7,7 +7,7 @@ import Controller from "../interfaces/controller.interface";
 import authMiddleware from "../middlewares/auth.middleware";
 import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
 import validationMiddleware from "../middlewares/validation.middleware";
-import userModel from "../user/user.model";
+// import userModel from "../user/user.model";
 import CreateProductDto from "./products.dto";
 import IProduct from "./products.interface";
 import Product from "./products.interface";
@@ -17,7 +17,7 @@ export default class ProductController implements Controller {
     public path = "/products";
     public router = Router();
     private product = productModel;
-    private user = userModel;
+    // private user = userModel;
     constructor() {
         this.initializeRoutes();
     }

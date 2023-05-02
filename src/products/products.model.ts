@@ -9,6 +9,8 @@ const productSchema = new Schema<IProduct>(
         type: String,
         description: String,
         picture: String,
+        unit: String,
+        weight: String,
     },
     { versionKey: false, timestamps: true },
 );

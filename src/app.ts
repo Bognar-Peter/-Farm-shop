@@ -122,8 +122,7 @@ export default class App {
 
     private connectToTheDatabase(controllers: IController[]) {
         const { MONGO_URI, MONGO_DB } = process.env;
-        // Connect to MongoDB Atlas, create database if not exist::
-        mongoose.set("strictQuery", true); // for disable DeprecationWarning
+        mongoose.set("strictQuery", true);
         mongoose.connect(MONGO_URI, { dbName: MONGO_DB }).catch(error => console.log(`Mongoose error on connection! Message: ${error.message}`));
 
         mongoose.connection.on("error", error => {

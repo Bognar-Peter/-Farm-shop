@@ -7,7 +7,7 @@ import Controller from "../interfaces/controller.interface";
 import authMiddleware from "../middlewares/auth.middleware";
 import roleCheckMiddleware from "../middlewares/roleCheckMiddleware";
 import validationMiddleware from "../middlewares/validation.middleware";
-import userModel from "../user/user.model";
+// import userModel from "../user/user.model";
 import CreatePartnerDto from "./partners.dto";
 import IPartner from "./partners.interface";
 import Partner from "./partners.interface";
@@ -17,7 +17,7 @@ export default class PartnerController implements Controller {
     public path = "/partners";
     public router = Router();
     private Partner = PartnerModel;
-    private user = userModel;
+    // private user = userModel;
     constructor() {
         this.initializeRoutes();
     }

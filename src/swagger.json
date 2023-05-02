@@ -1027,6 +1027,900 @@
                 }
             }
         },
+        "/partners": {
+            "get": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "Összes partner lekérdezése.",
+                "description": "Az összes partner adatát tudjuk lekérdezni.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/partner"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "partner": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "Új partner mentése.",
+                "description": "Új partner mentése a 'partner' táblában",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/partner"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (Az új, elmentett partnerel tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/partner"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partners/{id}": {
+            "get": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "Egy partner lekérdezése.",
+                "description": "Az id paraméterben megadott partner adatait kérdezhetjük le.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A partner azonosítója.",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "d00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/partner"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Ezzel az azonosítóval (id) nincs partner!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "partner módosítása (PATCH).",
+                "description": "A paraméterben megadott partner adatait módosítja a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PATCH metódussal módosítandó partner azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "d00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/partner"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított partner adatokkal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/partner"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott partner (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "partner módosítása (PUT).",
+                "description": "A paraméterben megadott partner adatait módosítja a végpont PUT metódussal.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PUT metódussal módosítandó partner azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "d00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/partner"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított partner adataival tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/partner"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott partner (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "partners"
+                ],
+                "summary": "partner törlése.",
+                "description": "A paraméterben megadott partnert törli a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A törlendő partner azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "d00000000000000000000002"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK (A partner törölve.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "OK"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott partner (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ratings": {
+            "get": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "Összes rating lekérdezése.",
+                "description": "Az összes rating adatát tudjuk lekérdezni.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/rating"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "rating": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "Új rating mentése.",
+                "description": "Új rating mentése a 'rating' táblában",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/rating"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (Az új, elmentett ratingel tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/rating"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ratings/{id}": {
+            "get": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "Egy rating lekérdezése.",
+                "description": "Az id paraméterben megadott rating adatait kérdezhetjük le.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A rating azonosítója.",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "e00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/rating"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Ezzel az azonosítóval (id) nincs rating!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "rating módosítása (PATCH).",
+                "description": "A paraméterben megadott rating adatait módosítja a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PATCH metódussal módosítandó rating azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "e00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/rating"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított rating adatokkal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/rating"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott rating (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "rating módosítása (PUT).",
+                "description": "A paraméterben megadott rating adatait módosítja a végpont PUT metódussal.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PUT metódussal módosítandó rating azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "e00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/rating"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított rating adataival tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/rating"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott rating (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ratings"
+                ],
+                "summary": "rating törlése.",
+                "description": "A paraméterben megadott ratinget törli a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A törlendő rating azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "e00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK (A rating törölve.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "OK"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott rating (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/order-details": {
+            "get": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "Összes order-detail lekérdezése.",
+                "description": "Az összes order-detail adatát tudjuk lekérdezni.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/order-detail"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "order-detail": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "Új order-detail mentése.",
+                "description": "Új order-detail mentése a 'rating' táblában",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order-detail"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (Az új, elmentett order-detailel tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order-detail"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/order-details/{id}": {
+            "get": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "Egy order-detail lekérdezése.",
+                "description": "Az id paraméterben megadott order-detail adatait kérdezhetjük le.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A order-detail azonosítója.",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "b00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order-detail"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorSchema"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Ezzel az azonosítóval (id) nincs order-detail"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "order-detail módosítása (PATCH).",
+                "description": "A paraméterben megadott order-detail adatait módosítja a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PATCH metódussal módosítandó order-detail azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "b00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order-detail"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított rating adatokkal tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order-detail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order-detail (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "order-detail módosítása (PUT).",
+                "description": "A paraméterben megadott order-detail adatait módosítja a végpont PUT metódussal.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A PUT metódussal módosítandó order-detail azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "b00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/order-detail"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK (A módosított order-detail adataival tér vissza.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/order-detail"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order-detail (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "order-details"
+                ],
+                "summary": "order-detail törlése.",
+                "description": "A paraméterben megadott ratinget törli a végpont.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "A törlendő order-detail azonosítója (PK).",
+                        "in": "path",
+                        "schema": {
+                            "type": "string",
+                            "example": "b00000000000000000000001"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK (A order-detail törölve.)",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "OK"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "A megadott order-detail (id) nem létezik."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/authors": {
             "get": {
                 "tags": [
@@ -1939,6 +2833,54 @@
                     }
                 }
             },
+            "partner": {
+                "type": "object",
+                "required": [
+                    "title"
+                ],
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "PK - A partner azonosítója (ObjectID).",
+                        "example": "d00000000000000000000001"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "A partner tartalma.",
+                        "example": "Sok féle termék közül lehet válogatni!"
+                    },
+                    "title": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "A partner címe címe.",
+                        "example": "Terméklesen"
+                    }
+                }
+            },
+            "rating": {
+                "type": "object",
+                "required": [
+                    "title"
+                ],
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "PK - A rating azonosítója (ObjectID).",
+                        "example": "e00000000000000000000001"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "A rating tartalma.",
+                        "example": "Sok féle termék közül lehet válogatni!"
+                    },
+                    "title": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "A rating címe címe.",
+                        "example": "Terméklesen"
+                    }
+                }
+            },
             "order": {
                 "type": "object",
                 "required": [
@@ -1960,6 +2902,30 @@
                         "maxLength": 50,
                         "description": "A order címe címe.",
                         "example": "Megrendelések megtekintése"
+                    }
+                }
+            },
+            "order-detail": {
+                "type": "object",
+                "required": [
+                    "title"
+                ],
+                "properties": {
+                    "_id": {
+                        "type": "string",
+                        "description": "PK - A order-detail azonosítója (ObjectID).",
+                        "example": "b00000000000000000000001"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Az order-detail tartalma.",
+                        "example": "Sok féle termék közül lehet válogatni!"
+                    },
+                    "title": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "AZ order-detail címe címe.",
+                        "example": "Terméklesen"
                     }
                 }
             },
