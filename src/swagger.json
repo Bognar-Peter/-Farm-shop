@@ -7,10 +7,10 @@
     },
     "servers": [
         {
-            "url": "https://jedliksession.cyclic.app"
+            "url": "http://localhost:5000"
         },
         {
-            "url": "http://localhost:5000"
+            "url": "https://alma_korte.cyclic.app"
         }
     ],
     "paths": {

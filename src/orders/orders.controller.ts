@@ -10,7 +10,6 @@ import validationMiddleware from "../middlewares/validation.middleware";
 // import userModel from "../user/user.model";
 import CreateOrderDto from "./orders.dto";
 import IOrder from "./orders.interface";
-import Order from "./orders.interface";
 import orderModel from "./orders.model";
 
 export default class OrderController implements Controller {
@@ -103,7 +102,7 @@ export default class OrderController implements Controller {
             const id = req.params.id;
             if (!Types.ObjectId.isValid(id)) return next(new IdNotValidException(id));
 
-            const orderData: Order = req.body;
+            const orderData: IOrder = req.body;
             const order = await this.order.findByIdAndUpdate(id, orderData, { new: true });
             //if (!order) return next(new UserNotFoundException(id));
 

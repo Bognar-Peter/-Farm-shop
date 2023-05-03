@@ -9,10 +9,7 @@ export default class CreateOrderDto implements IOrder {
     public _id: Schema.Types.ObjectId;
 
     @IsMongoId()
-    public order_id: Schema.Types.ObjectId;
-
-    @IsMongoId()
-    public product_id: Schema.Types.ObjectId;
+    public user_id: Schema.Types.ObjectId;
 
     @IsNotEmpty()
     @IsString()
@@ -21,16 +18,4 @@ export default class CreateOrderDto implements IOrder {
     @IsNotEmpty()
     @IsNumber()
     public order_date: Date;
-
-    @IsNotEmpty()
-    @IsString()
-    public discount: boolean;
-
-    @IsNotEmpty()
-    @IsString()
-    public price: number;
-
-    @IsNotEmpty()
-    @IsString()
-    public quantity: number;
 }
