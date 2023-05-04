@@ -10,7 +10,6 @@ import validationMiddleware from "../middlewares/validation.middleware";
 // import userModel from "../user/user.model";
 import CreatePartnerDto from "./partners.dto";
 import IPartner from "./partners.interface";
-import Partner from "./partners.interface";
 import PartnerModel from "./partners.model";
 
 export default class PartnerController implements Controller {
@@ -100,7 +99,7 @@ export default class PartnerController implements Controller {
             const id = req.params.id;
             if (!Types.ObjectId.isValid(id)) return next(new IdNotValidException(id));
 
-            const PartnerData: Partner = req.body;
+            const PartnerData: IPartner = req.body;
             const Partner = await this.Partner.findByIdAndUpdate(id, PartnerData, { new: true });
             //if (!Partner) return next(new UserNotFoundException(id));
 

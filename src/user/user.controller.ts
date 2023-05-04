@@ -1,16 +1,14 @@
 import { NextFunction, Request, Response, Router } from "express";
-import ISession from "interfaces/session.interface";
+// import ISession from "interfaces/session.interface";
 import { Types } from "mongoose";
 
-import authorModel from "../author/author.model";
 import HttpException from "../exceptions/HttpException";
 import IdNotValidException from "../exceptions/IdNotValidException";
 import UserNotFoundException from "../exceptions/UserNotFoundException";
 import IController from "../interfaces/controller.interface";
-import IRequestWithUser from "../interfaces/requestWithUser.interface";
+// import IRequestWithUser from "../interfaces/requestWithUser.interface";
 import authMiddleware from "../middlewares/auth.middleware";
 import validationMiddleware from "../middlewares/validation.middleware";
-import postModel from "../post/post.model";
 import CreateUserDto from "./user.dto";
 import IUser from "./user.interface";
 import userModel from "./user.model";
@@ -19,16 +17,14 @@ export default class UserController implements IController {
     public path = "/users";
     public router = Router();
     private user = userModel;
-    private post = postModel;
-    private author = authorModel;
 
     constructor() {
         this.initializeRoutes();
     }
 
     private initializeRoutes() {
-        this.router.get(`${this.path}/posts/:id`, authMiddleware, this.getAllPostsOfUserByID);
-        this.router.get(`${this.path}/posts/`, authMiddleware, this.getAllPostsOfLoggedUser);
+        // this.router.get(`${this.path}/posts/:id`, authMiddleware, this.getAllPostsOfUserByID);
+        // this.router.get(`${this.path}/posts/`, authMiddleware, this.getAllPostsOfLoggedUser);
         this.router.get(`${this.path}/:id`, authMiddleware, this.getUserById);
         this.router.get(this.path, authMiddleware, this.getAllUsers);
         this.router.get(`${this.path}/posts/search/:keyword`, this.getUsersPostsWithSearch);
@@ -109,29 +105,29 @@ export default class UserController implements IController {
         }
     };
 
-    private getAllPostsOfLoggedUser = async (req: IRequestWithUser, res: Response, next: NextFunction) => {
-        try {
-            const id = (req.session as ISession).user_id; // Stored user's ID in Cookie
-            const posts = await this.post.find({ user_id: id });
-            res.send(posts);
-        } catch (error) {
-            next(new HttpException(400, error.message));
-        }
-    };
+    // private getAllPostsOfLoggedUser = async (req: IRequestWithUser, res: Response, next: NextFunction) => {
+    //     try {
+    //         const id = (req.session as ISession).user_id; // Stored user's ID in Cookie
+    //         const posts = await this.post.find({ user_id: id });
+    //         res.send(posts);
+    //     } catch (error) {
+    //         next(new HttpException(400, error.message));
+    //     }
+    // };
 
-    private getAllPostsOfUserByID = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            if (Types.ObjectId.isValid(req.params.id)) {
-                const id: string = req.params.id;
-                const posts = await this.author.find({ user_id: id }).select("-user_id").populate("post", "-_id");
-                res.send(posts);
-            } else {
-                next(new IdNotValidException(req.params.id));
-            }
-        } catch (error) {
-            next(new HttpException(400, error.message));
-        }
-    };
+    // private getAllPostsOfUserByID = async (req: Request, res: Response, next: NextFunction) => {
+    //     try {
+    //         if (Types.ObjectId.isValid(req.params.id)) {
+    //             const id: string = req.params.id;
+    //             const posts = await this.author.find({ user_id: id }).select("-user_id").populate("post", "-_id");
+    //             res.send(posts);
+    //         } else {
+    //             next(new IdNotValidException(req.params.id));
+    //         }
+    //     } catch (error) {
+    //         next(new HttpException(400, error.message));
+    //     }
+    // };
 
     private getUsersPostsWithSearch = async (req: Request, res: Response, next: NextFunction) => {
         try {
