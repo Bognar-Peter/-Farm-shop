@@ -283,7 +283,7 @@
         "price": 1250,
         "type": "Szórófejek",
         "description": "Öntözés minőségét befolyásoló alkatrészek",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Toro%20sz%C3%B3r%C3%B3fej.png",
         "unit": "col",
         "weight": 0.5
     },
@@ -295,7 +295,7 @@
         "price": 900,
         "type": "Szórófejek",
         "description": "Öntözés minőségét befolyásoló alkatrészek",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Irritrol%20sz%C3%B3r%C3%B3fej.png",
         "unit": "col",
         "weight": 0.75
     }

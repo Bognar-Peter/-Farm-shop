@@ -1,16 +1,16 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "title": "REST API minta backend",
+        "title": "Farm_Shop",
         "version": "1.0.0",
-        "description": "<img alt='DB_diagram' height='700px' src='https://nitslaszlo.github.io/static/session/db_diagram_new.jpg' />"
+        "description": "<img alt='DB_diagram' height='700px' src='https://github.com/Bognar-Peter/Farm-shop/blob/main/K%C3%A9pek/AB_diagram.jpg' />"
     },
     "servers": [
         {
             "url": "http://localhost:5000"
         },
         {
-            "url": "https://FarmShop.cyclic.app"
+            "url": "https://jedliksession.cyclic.app"
         }
     ],
     "paths": {
@@ -324,64 +324,6 @@
                     }
                 }
             },
-            "put": {
-                "tags": [
-                    "products"
-                ],
-                "summary": "product módosítása (PUT).",
-                "description": "A paraméterben megadott product adatait módosítja a végpont PUT metódussal.",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "description": "A PUT metódussal módosítandó product azonosítója (PK).",
-                        "in": "path",
-                        "schema": {
-                            "type": "string",
-                            "example": "a00000000000000000000018"
-                        },
-                        "required": true
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/product"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "OK (A módosított product adataival tér vissza.)",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "$ref": "#/components/schemas/product"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "A megadott product (id) nem létezik."
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
             "delete": {
                 "tags": [
                     "products"
@@ -595,64 +537,6 @@
                 "responses": {
                     "200": {
                         "description": "OK (A módosított order adatokkal tér vissza.)",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "$ref": "#/components/schemas/order"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "A megadott order (id) nem létezik."
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "orders"
-                ],
-                "summary": "order módosítása (PUT).",
-                "description": "A paraméterben megadott order adatait módosítja a végpont PUT metódussal.",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "description": "A PUT metódussal módosítandó order azonosítója (PK).",
-                        "in": "path",
-                        "schema": {
-                            "type": "string",
-                            "example": "c00000000000000000000002"
-                        },
-                        "required": true
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/order"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "OK (A módosított order adataival tér vissza.)",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -920,64 +804,6 @@
                     }
                 }
             },
-            "put": {
-                "tags": [
-                    "partners"
-                ],
-                "summary": "partner módosítása (PUT).",
-                "description": "A paraméterben megadott partner adatait módosítja a végpont PUT metódussal.",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "description": "A PUT metódussal módosítandó partner azonosítója (PK).",
-                        "in": "path",
-                        "schema": {
-                            "type": "string",
-                            "example": "d00000000000000000000002"
-                        },
-                        "required": true
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/partner"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "OK (A módosított partner adataival tér vissza.)",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "$ref": "#/components/schemas/partner"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "A megadott partner (id) nem létezik."
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
             "delete": {
                 "tags": [
                     "partners"
@@ -1191,64 +1017,6 @@
                 "responses": {
                     "200": {
                         "description": "OK (A módosított rating adatokkal tér vissza.)",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "$ref": "#/components/schemas/rating"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "A megadott rating (id) nem létezik."
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "ratings"
-                ],
-                "summary": "rating módosítása (PUT).",
-                "description": "A paraméterben megadott rating adatait módosítja a végpont PUT metódussal.",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "description": "A PUT metódussal módosítandó rating azonosítója (PK).",
-                        "in": "path",
-                        "schema": {
-                            "type": "string",
-                            "example": "e00000000000000000000001"
-                        },
-                        "required": true
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/rating"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "OK (A módosított rating adataival tér vissza.)",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -1516,64 +1284,6 @@
                     }
                 }
             },
-            "put": {
-                "tags": [
-                    "order-details"
-                ],
-                "summary": "order-detail módosítása (PUT).",
-                "description": "A paraméterben megadott order-detail adatait módosítja a végpont PUT metódussal.",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "description": "A PUT metódussal módosítandó order-detail azonosítója (PK).",
-                        "in": "path",
-                        "schema": {
-                            "type": "string",
-                            "example": "b00000000000000000000001"
-                        },
-                        "required": true
-                    }
-                ],
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/order-detail"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "OK (A módosított order-detail adataival tér vissza.)",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "$ref": "#/components/schemas/order-detail"
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "A megadott order-detail (id) nem létezik."
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
             "delete": {
                 "tags": [
                     "order-details"
@@ -1631,30 +1341,6 @@
     ],
     "components": {
         "schemas": {
-            "post": {
-                "type": "object",
-                "required": [
-                    "title"
-                ],
-                "properties": {
-                    "_id": {
-                        "type": "string",
-                        "description": "PK - A post azonosítója (ObjectID).",
-                        "example": "61b5f28df39e4edcf5b8a3e7"
-                    },
-                    "content": {
-                        "type": "string",
-                        "description": "A post tartalma.",
-                        "example": "Frankie Dunn pályája során számos fantasztikus bunyóst edzett és menedzselt. Legfőbb tanítása, mely vezérli az életét is, hogy a legfontosabb az, hogy mindig védd magad. Mióta elidegenedett a lányától, Frankie jó ideje senkit sem engedett közel magához. Egyetlen barátja Hepaj, az egykori bokszoló, aki rendben tartja Frankie edzőtermét, és tudja, hogy a mogorva külső olyan embert takar, aki az elmúlt 23 évben szinte minden nap misére járt, keresve a megbocsátást, amely valahogy mégsem adatik meg neki. Aztán egy nap Maggie Fitzgerald besétál az edzőterembe. Maggie-nek sosem jutott sok semmiből, de van benne valami, ami csak keveseknek adatik meg: tudja, mit akar, és bármit hajlandó megtenni érte. Az élete állandó küzdelem, amit nyers tehetségével, kizökkenthetetlen koncentrálásával és elképesztő akaraterejével képes túlélni."
-                    },
-                    "title": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "A post címe címe.",
-                        "example": "Millió dolláros bébi 2004"
-                    }
-                }
-            },
             "product": {
                 "type": "object",
                 "required": [
@@ -1700,7 +1386,7 @@
                     "weight": {
                         "type": "number",
                         "description": "A termék tömege.",
-                        "example": "2"
+                        "example": 2
                     }
                 }
             },
@@ -1797,72 +1483,6 @@
                         "maxLength": 50,
                         "description": "AZ order-detail címe címe.",
                         "example": "Terméklesen"
-                    }
-                }
-            },
-            "author": {
-                "type": "object",
-                "required": [
-                    "user_id",
-                    "post_id"
-                ],
-                "properties": {
-                    "_id": {
-                        "type": "string",
-                        "description": "PK - Az author azonosítója (ObjectId).",
-                        "example": "642747f1a0ef99fc1e2aeaf5"
-                    },
-                    "user_id": {
-                        "type": "string",
-                        "description": "FK - A user azonosítója (ObjectId).",
-                        "example": "61b5ea14f39e4edcf5b8a3bd"
-                    },
-                    "post_id": {
-                        "type": "string",
-                        "description": "FK - A pot azonosítója (ObjectID).",
-                        "example": "61b6332df39e4edcf5b8a407"
-                    }
-                }
-            },
-            "recipe": {
-                "type": "object",
-                "required": [
-                    "recipeName"
-                ],
-                "properties": {
-                    "_id": {
-                        "type": "string",
-                        "description": "PK - A recept azonosítója (ObjectID).",
-                        "example": "61daf48ba5775848e99f555b"
-                    },
-                    "user_id": {
-                        "type": "string",
-                        "description": "FK - A recept szerzője (ObjectID).",
-                        "example": "61b5e9c0f39e4edcf5b8a3b9"
-                    },
-                    "recipeName": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "A recept neve.",
-                        "example": "PENNE ALL ARRABBIATA CSIRKEMELLEL"
-                    },
-                    "imageURL": {
-                        "type": "string",
-                        "description": "Az elkészült ételt ábrázoló kép URL címe.",
-                        "example": "https://www.mindmegette.hu/images/240/O/penne-arrabbiata-csirkes.jpg"
-                    },
-                    "decription": {
-                        "type": "string",
-                        "description": "Az étel elkészítésének leírása.",
-                        "example": "A tésztát a csomágolásán látható utasítás szerint forró, sós vízbe kifőzzük és leszűrjük. A finomra vágott hagymákat olajon megdinszteljük, majd hozzáadjuk a kockára vágott csirkemellet és fehéredésig pirítjuk. Sózzuk, borsozzuk, ráöntjük a paradicsomkonzervet és a vörösbort majd forrásig melegítjük.\nHozzáadjuk a chilit, a felaprított bazsalikomot, az oregánót, végül pedig a barnacukrot és 25-30 percig főzzük, míg a csirkemell meg nem puhul, majd összekeverjük a tésztával."
-                    },
-                    "ingredients": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "description": "A hozzávalókat tartalmazó tömb.",
-                        "example": "[\"50 dkg penne\", \"1 db vöröshagyma\", \"4 gerezd fokhagyma\", \"30 dkg\tcsirkemell\", \"só\", \"bors\", \"stb.\"]"
                     }
                 }
             },
