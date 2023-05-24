@@ -7,7 +7,7 @@
         "price": 2000,
         "type": "Csövek",
         "description": "Kiszáradás elleni védelem",
-        "picture": "Hagyma.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20KPE%20ontozocso.png",
         "unit": "kg/m",
         "weight": 4
     },
@@ -19,7 +19,7 @@
         "price": 9000,
         "type": "Csövek",
         "description": "Kiszáradás elleni védelem",
-        "picture": "Sárgarépa.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20KPE%20ontozocso.png",
         "unit": "kg/m",
         "weight": 20
     },
@@ -31,7 +31,7 @@
         "price": 20000,
         "type": "Csövek",
         "description": "Kiszáradás elleni védelem",
-        "picture": "Petrezselyem.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20KPE%20ontozocso.png",
         "unit": "kg/m",
         "weight": 40
     },
@@ -43,7 +43,7 @@
         "price": 41000,
         "type": "Csövek",
         "description": "Kiszáradás elleni védelem",
-        "picture": "Borsó.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20KPE%20ontozocso.png",
         "unit": "kg/m",
         "weight": 100
     },
@@ -55,7 +55,7 @@
         "price": 80000,
         "type": "Csövek",
         "description": "Kiszáradás elleni védelem",
-        "picture": "Karalábé.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20KPE%20ontozocso.png",
         "unit": "kg/m",
         "weight": 200
     },
@@ -67,7 +67,7 @@
         "price": 200,
         "type": "Csatlakozó idomok",
         "description": "Csövek toldása, elágaztatása",
-        "picture": "Lapát.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20toldo.png",
         "unit": "g",
         "weight": 2
     },
@@ -79,7 +79,7 @@
         "price": 300,
         "type": "Csatlakozó idomok",
         "description": "Csövek toldása, elágaztatása",
-        "picture": "Gereblye.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20egyenes%20sz%C5%B1k%C3%ADt%C5%91%20told%C3%B3.png",
         "unit": "g",
         "weight": 2.5
     },
@@ -91,7 +91,7 @@
         "price": 250,
         "type": "Csatlakozó idomok",
         "description": "Csövek toldása, elágaztatása",
-        "picture": "Seprű.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20konyok.png",
         "unit": "g",
         "weight": 3
     },
@@ -103,7 +103,7 @@
         "price": 350,
         "type": "Csatlakozó idomok",
         "description": "Csövek toldása, elágaztatása",
-        "picture": "Ásó.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/LPE%20T.png",
         "unit": "g",
         "weight": 2
     },
@@ -115,7 +115,7 @@
         "price": 400,
         "type": "Csatlakozó idomok",
         "description": "Csövek toldása, elágaztatása",
-        "picture": "Csákány.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Cso%20indito.png",
         "unit": "g",
         "weight": 5
     },
@@ -127,7 +127,7 @@
         "price": 50000,
         "type": "Szívattyúk",
         "description": "Vízmozgatás",
-        "picture": "Kalapács.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Leo%20vizszivattyu.png",
         "unit": "kg",
         "weight": 18
     },
@@ -139,7 +139,7 @@
         "price": 40000,
         "type": "Szívattyúk",
         "description": "Vízmozgatás",
-        "picture": "Csavarhúzó.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Leo%20centrifugal%20szivattyu.png",
         "unit": "kg",
         "weight": 20
     },
@@ -151,7 +151,7 @@
         "price": 25000,
         "type": "Szivattyúk",
         "description": "Vízmozgatás",
-        "picture": "kulcs.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Leo%20periferikus%20szivattyu.png",
         "unit": "kg",
         "weight": 15
     },
@@ -163,7 +163,7 @@
         "price": 3000,
         "type": "Szívattyúk",
         "description": "Vízmozgatás",
-        "picture": "Mérőszalag.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Benzinmotoros%20szivattyu.png",
         "unit": "kg",
         "weight": 30
     },
@@ -175,7 +175,7 @@
         "price": 3000,
         "type": "Szívattyúk ",
         "description": "Vízmozgatás",
-        "picture": "Fogó.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Buvarszivattyu.png",
         "unit": "kg",
         "weight": 13
     },
@@ -187,7 +187,7 @@
         "price": 140,
         "type": "Gumigyűrűk",
         "description": "A vízveszteség csökkentése",
-        "picture": "Kesztyű.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/O-gyuru.png",
         "unit": "g",
         "weight": 20
     },
@@ -199,7 +199,7 @@
         "price": 170,
         "type": "Gumigyűrűk",
         "description": "A vízveszteség csökkentése",
-        "picture": "Sisak.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/X-gyuru.png",
         "unit": "g",
         "weight": 15
     },
@@ -211,7 +211,7 @@
         "price": 200,
         "type": "Gumigyűrűk",
         "description": "A vízveszteség csökkentése",
-        "picture": "Térdvédő.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/V-gyuru.png",
         "unit": "g",
         "weight": 12
     },
@@ -223,7 +223,7 @@
         "price": 300,
         "type": "Gumigyűrűk",
         "description": "A vízveszteség csökkentése",
-        "picture": "Maszk.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/T-gyuru.png",
         "unit": "g",
         "weight": 25
     },
@@ -235,7 +235,7 @@
         "price": 350,
         "type": "Gumigyűrűk",
         "description": "A vízveszteség csökkentése",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Karimagyuru.png",
         "unit": "g",
         "weight": 10
     },
@@ -247,7 +247,7 @@
         "price": 650,
         "type": "Szórófejek",
         "description": "Öntözés minőségét befolyásoló alkatrészek",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/Hunter.png",
         "unit": "col",
         "weight": 0.5
     },
@@ -259,7 +259,7 @@
         "price": 600,
         "type": "Szórófejek",
         "description": "Öntözés minőségét befolyásoló alkatrészek",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/K-Rain.png",
         "unit": "col",
         "weight": 3
     },
@@ -271,7 +271,7 @@
         "price": 730,
         "type": "Szórófejek",
         "description": "Öntözés minőségét befolyásoló alkatrészek",
-        "picture": "Védőszemüveg.webp",
+        "picture": "https://github.com/Bognar-Peter/Images/blob/main/RainBird.png",
         "unit": "col",
         "weight": 0.5
     },

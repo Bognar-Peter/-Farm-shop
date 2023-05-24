@@ -3,32 +3,240 @@
         "_id": {
             "$oid": "e00000000000000000000001"
         },
-        "star": 5,
-        "commment": "valami1",
+        "star": 2,
+        "commment": "Nem az jött amit rendeltem.",
         "users_id": {
             "$oid": "f00000000000000000000003"
         },
         "partners_id": {
-            "$oid": "d00000000000000000000001"
+            "$oid": "d00000000000000000000007"
         },
         "product_id": {
-            "$oid": "a00000000000000000000002"
+            "$oid": "a00000000000000000000007"
         }
     },
     {
         "_id": {
             "$oid": "e00000000000000000000002"
         },
-        "star": 6,
-        "commment": "valami2",
+        "star": 4,
+        "commment": "Jó a weboldal csak néha lefagy a rendszer.",
         "users_id": {
             "$oid": "f00000000000000000000005"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000013"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000004"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000003"
+        },
+        "star": 2,
+        "commment": "Sokszor kellett rendelnem újat, mert a gyűrű megrepedt.",
+        "users_id": {
+            "$oid": "f00000000000000000000002"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000015"
+        },
+        "product_id": {
+            "$oid": "a000000000000000000000018"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000004"
+        },
+        "star": 5,
+        "commment": "Minden pozitív.",
+        "users_id": {
+            "$oid": "f00000000000000000000007"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000018"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000024"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000005"
+        },
+        "star": 2,
+        "commment": "Nem tudom megkülönböztetni a képeket",
+        "users_id": {
+            "$oid": "f00000000000000000000006"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000017"
+        },
+        "product_id": {
+            "$oid": "a000000000000000000000023"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000006"
+        },
+        "star": 4,
+        "commment": "Jó, csak néha nem tömít rendesen.",
+        "users_id": {
+            "$oid": "f00000000000000000000001"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000019"
+        },
+        "product_id": {
+            "$oid": "a000000000000000000000019"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000007"
+        },
+        "star": 5,
+        "commment": "Megfelelő a méret!",
+        "users_id": {
+            "$oid": "f00000000000000000000005"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000020"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000003"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000008"
+        },
+        "star": 1,
+        "commment": "Nem jó a szivattyú!",
+        "users_id": {
+            "$oid": "f00000000000000000000002"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000003"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000015"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000009"
+        },
+        "star": 1,
+        "commment": "Kihozták és ugyanúgy folyik a víz a csőből.",
+        "users_id": {
+            "$oid": "f00000000000000000000007"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000009"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000020"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000010"
+        },
+        "star": 5,
+        "commment": "Nagyon jók, mindig időbe és megfelelő állapotba hozzák ki.",
+        "users_id": {
+            "$oid": "f00000000000000000000002"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000008"
+        },
+        "product_id": {
+            "$oid": "a000000000000000000000018"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000011"
+        },
+        "star": 3,
+        "commment": "Jók, csak néha hibásan hozzák ki.",
+        "users_id": {
+            "$oid": "f00000000000000000000003"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000005"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000008"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000012"
+        },
+        "star": 4,
+        "commment": "Jó, csak túl későn hozták ki.",
+        "users_id": {
+            "$oid": "f00000000000000000000004"
         },
         "partners_id": {
             "$oid": "d00000000000000000000002"
         },
         "product_id": {
-            "$oid": "a00000000000000000000001"
+            "$oid": "a00000000000000000000011"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000013"
+        },
+        "star": 5,
+        "commment": "Tökéletesen passzol a slagomhoz.",
+        "users_id": {
+            "$oid": "f00000000000000000000002"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000011"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000010"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000014"
+        },
+        "star": 2,
+        "commment": "Túl hamar eltörik a cső.",
+        "users_id": {
+            "$oid": "f00000000000000000000006"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000018"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000005"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "e00000000000000000000015"
+        },
+        "star": 3,
+        "commment": "Nem jó a méret.",
+        "users_id": {
+            "$oid": "f00000000000000000000005"
+        },
+        "partners_id": {
+            "$oid": "d00000000000000000000012"
+        },
+        "product_id": {
+            "$oid": "a00000000000000000000016"
         }
     }
 ]

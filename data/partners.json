@@ -6,7 +6,7 @@
         "name": "partner001",
         "address": "Mintapartner22",
         "email": "partner001@jedlik.eu",
-        "phone_number": "0845879555164",
+        "phone_number": "0845879655164",
         "users_id": [
             {
                 "$oid": "f00000000000000000000006"
@@ -20,10 +20,262 @@
         "name": "partner002",
         "address": "Mintapartner23",
         "email": "partner002@jedlik.eu",
-        "phone_number": "0845879555153",
+        "phone_number": "0845870555153",
         "users_id": [
             {
                 "$oid": "f00000000000000000000007"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000003"
+        },
+        "name": "partner003",
+        "address": "Mintapartner24",
+        "email": "partner003@jedlik.eu",
+        "phone_number": "0845889555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000002"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000004"
+        },
+        "name": "partner004",
+        "address": "Mintapartner25",
+        "email": "partner004@jedlik.eu",
+        "phone_number": "0845979555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000004"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000005"
+        },
+        "name": "partner005",
+        "address": "Mintapartner26",
+        "email": "partner005@jedlik.eu",
+        "phone_number": "0846879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000001"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000006"
+        },
+        "name": "partner006",
+        "address": "Mintapartner27",
+        "email": "partner006@jedlik.eu",
+        "phone_number": "0855879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000006"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000007"
+        },
+        "name": "partner007",
+        "address": "Mintapartner28",
+        "email": "partner007@jedlik.eu",
+        "phone_number": "0945879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000001"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000008"
+        },
+        "name": "partner008",
+        "address": "Mintapartner29",
+        "email": "partner008@jedlik.eu",
+        "phone_number": "1845879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000003"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000009"
+        },
+        "name": "partner009",
+        "address": "Mintapartner30",
+        "email": "partner009@jedlik.eu",
+        "phone_number": "0845879555163",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000007"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000010"
+        },
+        "name": "partner010",
+        "address": "Mintapartner31",
+        "email": "partner010@jedlik.eu",
+        "phone_number": "0845879555154",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000002"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000011"
+        },
+        "name": "partner011",
+        "address": "Mintapartner32",
+        "email": "partner011@jedlik.eu",
+        "phone_number": "0845879555064",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000005"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000012"
+        },
+        "name": "partner012",
+        "address": "Mintapartner33",
+        "email": "partner012@jedlik.eu",
+        "phone_number": "0845879554164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000004"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000013"
+        },
+        "name": "partner013",
+        "address": "Mintapartner34",
+        "email": "partner013@jedlik.eu",
+        "phone_number": "0845879545164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000001"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000014"
+        },
+        "name": "partner014",
+        "address": "Mintapartner35",
+        "email": "partner014@jedlik.eu",
+        "phone_number": "0845879455164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000007"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000015"
+        },
+        "name": "partner015",
+        "address": "Mintapartner36",
+        "email": "partner015@jedlik.eu",
+        "phone_number": "0845878555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000004"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000016"
+        },
+        "name": "partner016",
+        "address": "Mintapartner37",
+        "email": "partner016@jedlik.eu",
+        "phone_number": "0845869555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000006"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000017"
+        },
+        "name": "partner017",
+        "address": "Mintapartner38",
+        "email": "partner017@jedlik.eu",
+        "phone_number": "0845779555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000002"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000018"
+        },
+        "name": "partner018",
+        "address": "Mintapartner39",
+        "email": "partner018@jedlik.eu",
+        "phone_number": "0844879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000005"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000019"
+        },
+        "name": "partner019",
+        "address": "Mintapartner40",
+        "email": "partner019@jedlik.eu",
+        "phone_number": "0835879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000004"
+            }
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "d00000000000000000000020"
+        },
+        "name": "partner020",
+        "address": "Mintapartner41",
+        "email": "partner020@jedlik.eu",
+        "phone_number": "0745879555164",
+        "users_id": [
+            {
+                "$oid": "f00000000000000000000001"
             }
         ]
     }

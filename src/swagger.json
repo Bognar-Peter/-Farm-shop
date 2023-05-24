@@ -3,14 +3,14 @@
     "info": {
         "title": "Farm_Shop",
         "version": "1.0.0",
-        "description": "<img alt='DB_diagram' height='700px' src='https://github.com/Bognar-Peter/Farm-shop/blob/main/K%C3%A9pek/AB_diagram.jpg' />"
+        "description": "<img alt='AB_diagram.jpg' height='700px' src='https://nitslaszlo.github.io/static/session/db_diagram_new.jpg'/>"
     },
     "servers": [
         {
             "url": "http://localhost:5000"
         },
         {
-            "url": "https://jedliksession.cyclic.app"
+            "url": "https://Farm_Shop.cyclic.app"
         }
     ],
     "paths": {
