@@ -26,6 +26,6 @@ export default class CreateProductsDto {
     public unit: string;
 
     @IsNotEmpty()
-    @IsString()
-    public weight: string;
+    @IsNumber()
+    public weight: number;
 }

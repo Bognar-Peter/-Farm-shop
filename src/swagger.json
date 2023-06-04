@@ -2,8 +2,7 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Farm_Shop",
-        "version": "1.0.0",
-        "description": "<img alt='AB_diagram.jpg' height='700px' src='https://nitslaszlo.github.io/static/session/db_diagram_new.jpg'/>"
+        "version": "1.0.0"
     },
     "servers": [
         {

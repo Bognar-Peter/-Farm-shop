@@ -10,7 +10,7 @@ const productSchema = new Schema<IProduct>(
         description: String,
         picture: String,
         unit: String,
-        weight: String,
+        weight: Number,
     },
     { versionKey: false, timestamps: true },
 );

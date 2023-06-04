@@ -8,5 +8,5 @@ export default interface IProduct {
     description: string;
     picture: string;
     unit: string; // g, kg, liter, stb.
-    weight: string;
+    weight: number;
 }
